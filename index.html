@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ігрова Торгова Площадка</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключение Font Awesome (для иконок в модальном окне) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+        <h1><i>Skin Market</i></h1>
+    </header>
+
+    <main>
+        <p class="choose-platform">Оберіть торгову площадку:</p>
+        <div class="game-grid">
+            <!-- Карточки игр -->
+            <!-- data-href - относительный путь к папке с игрой (csgo/, dota2/ и т.д.) -->
+            <div class="game-item" data-href="csgo/">
+                <div class="game-item-inner">
+                    <!-- data-src - путь к основному изображению, src - путь к placeholder -->
+                    <img data-src="assets/images/csgo.jpg" alt="CS:GO" src="assets/images/placeholder.gif">
+                    <span>CS:GO</span>
+                </div>
+            </div>
+            <div class="game-item" data-href="dota2/">
+                <div class="game-item-inner">
+                    <img data-src="assets/images/dota2.jpg" alt="Dota 2" src="assets/images/placeholder.gif">
+                    <span>Dota 2</span>
+                </div>
+            </div>
+            <div class="game-item" data-href="rust/">
+                <div class="game-item-inner">
+                    <img data-src="assets/images/rust.jpg" alt="Rust" src="assets/images/placeholder.gif">
+                    <span>Rust</span>
+                </div>
+            </div>
+            <div class="game-item" data-href="tf2/">
+                <div class="game-item-inner">
+                    <img data-src="assets/images/tf2.jpg" alt="Team Fortress 2" src="assets/images/placeholder.gif">
+                    <span>Team Fortress 2</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Кнопка "Виконав" (ссылка) -->
+        <a href="https://moodle.mnau.edu.ua/user/profile.php?id=31593" target="_blank" class="footer-button">
+            Виконав: Чулов Данііл<br>Група: КН2/1
+        </a>
+        <!-- Кнопка "Про мене" -->
+        <button id="about-me-button">Про мене</button>
+    </footer>
+
+    <!-- Модальное окно (изначально скрыто) -->
+    <div id="social-links-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Про мене</h2>
+            <ul class="social-icons">
+                <!--  реальные URL твоих соцсетей -->
+                <li><a href="https://t.me/neodukvat0" target="_blank"><i class="fab fa-telegram"></i><span>Telegram</span></a></li>
+                <li><a href="https://steamcommunity.com/id/NeOdUkVaT" target="_blank"><i class="fab fa-steam"></i><span>Steam</span></a></li>
+                <li><a href="https://discordapp.com/users/neodukvat/" target="_blank"><i class="fab fa-discord"></i><span>Discord</span></a></li>
+                <li><a href="https://www.youtube.com/@%D0%A1%D0%BB%D0%B0%D0%91%D1%8B%D0%B9-%D1%8F8%D1%87" target="_blank"><i class="fab fa-youtube"></i><span>YouTube</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
