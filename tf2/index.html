@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Торговий майданчик TF2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="page-index">
+    <header class="site-header">
+        <h1>Торговий майданчик TF2</h1>
+        <div class="user-info">
+            <span id="user-greeting"></span>
+            <button id="logout-button" style="display: none;"><i class="fa-solid fa-right-from-bracket"></i> Вийти</button>
+            <button id="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Кошик (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="filters">
+            <h2>Фільтри</h2>
+            <div class="filter-group">
+                <h3>Тип Предмета</h3>
+                <select id="item-type">
+                    <option value="all">Всі</option>
+                    <option value="hat">Шапки</option>
+                    <option value="weapon">Зброя</option>
+                    <option value="misc">Аксесуари (Misc)</option>
+                    <option value="taunt">Насмішки</option>
+                     <option value="tool">Інструменти</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <h3>Якість (TF2)</h3>
+                <select id="tf2-quality">
+                    <option value="all">Вся</option>
+                    <option value="unique">Unique</option>
+                    <option value="strange">Strange</option>
+                    <option value="vintage">Vintage</option>
+                    <option value="genuine">Genuine</option>
+                    <option value="haunted">Haunted</option>
+                    <option value="unusual">Unusual</option>
+                    <option value="collectors">Collector's</option>
+                </select>
+            </div>
+            <!-- ФИЛЬТР ПО КЛАССУ ВОЗВРАЩЕН -->
+            <div class="filter-group">
+                <h3>Клас</h3>
+                <select id="tf2-class">
+                    <option value="all">Всі класи</option>
+                    <option value="scout">Scout</option>
+                    <option value="soldier">Soldier</option>
+                    <option value="pyro">Pyro</option>
+                    <option value="demoman">Demoman</option>
+                    <option value="heavy">Heavy</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="medic">Medic</option>
+                    <option value="sniper">Sniper</option>
+                    <option value="spy">Spy</option>
+                    <option value="multi-class">Multi-Class</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <h3>Ціна</h3>
+                <div class="price-input">
+                    <div class="field">
+                        <span>Мін</span>
+                        <input type="number" class="input-min" value="0">
+                    </div>
+                    <div class="separator">-</div>
+                    <div class="field">
+                        <span>Макс</span>
+                        <input type="number" class="input-max" value="100000">
+                    </div>
+                </div>
+            </div>
+            <button id="apply-filters">Застосувати</button>
+        </div>
+        <div class="items-wrapper">
+            <button id="sort-by-price">Сортувати за ціною</button>
+            <div class="items">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
