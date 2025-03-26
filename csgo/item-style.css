@@ -1,0 +1,375 @@
+/* item-style.css */
+
+/* Стили, специфичные ТОЛЬКО для item.html */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.item-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.item-image {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.item-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.item-info {
+    width: 45%;
+    padding-left: 20px;
+}
+
+.item-info p {
+    margin-bottom: 10px;
+}
+
+.item-info strong {
+    color: #ccc;
+}
+
+/* Стили для шкалы Float */
+.item-fill-bar-container {
+    width: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+    height: 6px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    border: 1px solid #444;
+}
+
+.item-fill-bar {
+    height: 100%;
+    border-radius: 5px;
+}
+
+#buy-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#buy-button:hover {
+    background-color: #45a049;
+}
+
+.chart-container {
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Стили для кнопки назад */
+.back-button {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin: 10px 0 10px 20px;
+    float: right;
+}
+.back-button:hover{
+  background-color: #5a6268;
+}
+
+/*  СТИЛИ, СПЕЦИФИЧНЫЕ ДЛЯ МОДАЛЬНОГО ОКНА АВТОРИЗАЦИИ */
+/*  Общие стили для .modal и .modal-content - в style.css! */
+
+#myModal .modal-content h2 {  /*  Добавлено */
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#myModal .modal-content #login,  /*  Более точный селектор */
+#myModal .modal-content #password {  /*  Более точный селектор */
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+#myModal .modal-content #login-button {  /*  Более точный селектор */
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#myModal .modal-content #login-button:hover {  /*  Более точный селектор */
+    background-color: #0056b3;
+}
+
+/*  УДАЛЯЕМ лишние стили (они есть в style.css) */
+/* .site-header, .user-info, #user-greeting, #logout-button, #cart-link {} */
+
+/*  ОБЩИЕ СТИЛИ ДЛЯ *ВСЕХ* МОДАЛЬНЫХ ОКОН */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #333;
+    color: #fff;
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Центрируем содержимое */
+}
+
+/* item-style.css (FINAL - Only Cart Modal Changes) */
+
+/*
+  Keep ALL your existing styles for body, .container, .item-details,
+  .item-image, .item-info, #buy-button, .chart-container, .back-button,
+  #myModal, .site-header, .user-info, etc.  This file ONLY contains
+  the changed styles for the cart modal.  You should MERGE these
+  changes into your existing item-style.css file.
+*/
+
+/*  СТИЛИ, СПЕЦИФИЧНЫЕ ДЛЯ МОДАЛЬНОГО ОКНА КОРЗИНЫ */
+#cart-modal .modal-content h2 {
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#cart-modal .modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-modal .modal-content li {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+    justify-content: space-between;
+}
+
+#cart-modal .modal-content li:last-child {
+    border-bottom: none;
+}
+
+#cart-modal .modal-content img {
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 50px;         /*  ADD THIS */
+    height: 50px;        /*  ADD THIS */
+    object-fit: cover;  /* ADD THIS */
+}
+
+/*  Кнопки "+" и "-" */
+#cart-modal .modal-content button.plus-button,
+#cart-modal .modal-content button.minus-button {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#cart-modal .modal-content button.plus-button:hover,
+#cart-modal .modal-content button.minus-button:hover {
+    background-color: #5a6268;
+}
+
+#cart-modal .modal-content .item-quantity {
+    margin: 0 8px;
+}
+
+/*  Кнопка "Удалить" */
+#cart-modal .modal-content .remove-item {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#cart-modal .modal-content .remove-item:hover {
+    background-color: #c82333;
+}
+
+#cart-modal .modal-content #cart-total {
+    font-weight: bold;
+}
+
+#cart-modal .modal-content #clear-cart {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#cart-modal .modal-content #clear-cart:hover {
+    background-color: #c82333;
+}
+
+/*  CRITICAL CHANGES FOR LONG TITLES (Ellipsis) */
+#cart-modal .modal-content .item-title {
+    white-space: nowrap;       /*  1. Prevent wrapping */
+    overflow: hidden;          /*  2. Hide overflowing text */
+    text-overflow: ellipsis;  /*  3. Add an ellipsis (...) */
+    line-height: 1.4;
+    margin-right: 15px;
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+#cart-modal .modal-content .item-price{
+	white-space: nowrap; /* Prevent price from wrapping */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.item-price {
+    margin-right: 15px;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2d2d2d;
+    border-bottom: 1px solid #444;
+}
+/*Пользователь*/
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+#user-greeting {
+    margin-right: 10px;
+    white-space: nowrap;
+}
+#logout-button {
+  background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-right: 15px;
+}
+
+#logout-button:hover {
+    background-color: #c82333;
+}
+#cart-link{
+   border: none;          /* Убираем рамку */
+  background: none;     /* Убираем фон */
+  color: #fff;         /* Белый цвет текста */
+  font-size: 14px;
+  cursor: pointer;     /* Курсор-указатель */
+  padding: 0;           /* Убираем внутренние отступы */
+  font: inherit;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Торговий майданчик CS:GO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="site-header">
+        <h1>Торговий майданчик CS:GO</h1>
+        <!-- Блок з інформацією про користувача та кнопками -->
+        <div class="user-info">
+            <span id="user-greeting"></span> <!-- Сюди буде виводитися привітання -->
+            <button id="logout-button" style="display: none;"><i class="fa-solid fa-right-from-bracket"></i> Вийти</button> <!-- Кнопка "Вийти" (спочатку прихована) -->
+            <button id="cart-link"> <!-- Кнопка "Кошик" -->
+                <i class="fa-solid fa-cart-shopping"></i>
+                Кошик (<span id="cart-count">0</span>)  <!-- Лічильник товарів у кошику -->
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Фільтри -->
+        <div class="filters">
+            <h2>Фільтри</h2>
+
+            <div class="filter-group">
+                <h3>Тип Зброї</h3>
+                <select id="weapon-type">
+                    <option value="all">Всі</option>
+                    <option value="pistol">Пістолети</option>
+                    <option value="rifle">Гвинтівки</option>
+                    <option value="smg">Пістолети-кулемети</option>
+                    <option value="sniper rifle">Снайперські Гвинтівки</option>
+                    <option value="knife">Ножі</option>
+                    <option value="gloves">Рукавички</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <h3>Якість</h3>
+                <select id="quality">
+                    <option value="all">Вся</option>
+                    <option value="factory-new">Прямо с завода</option>
+                    <option value="minimal-wear">Майже незношене</option>
+                    <option value="field-tested">Після польових випробувань</option>
+                    <option value="well-worn">Поношене</option>
+                    <option value="battle-scarred">Закалене в боях</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <h3>Ціна</h3>
+                <div class="price-input">
+                    <div class="field">
+                        <span>Мін</span>
+                        <input type="number" class="input-min" value="400">
+                    </div>
+                    <div class="separator">-</div>  <!-- ЗМІНЕНО: Було "_", стало "-" -->
+                    <div class="field">
+                        <span>Макс</span>
+                        <input type="number" class="input-max" value="40000">
+                    </div>
+                </div>
+            </div>
+
+            <button id="apply-filters">Застосувати</button> <!-- Кнопка застосування фільтрів -->
+        </div>
+
+        <!-- Список товарів -->
+        <div class="items-wrapper">
+            <button id="sort-by-price">Сортувати за ціною</button> <!-- Кнопка сортування -->
+            <div class="items">
+                <!-- Сюди будуть додаватися картки товарів через JavaScript -->
+            </div>
+        </div>
+    </div>
+    <!-- Підключаємо JavaScript файли -->
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
