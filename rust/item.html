@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Деталі скіна Rust</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="item-style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1>Деталі скіна Rust</h1>
+            <div class="user-info">
+                <span id="user-greeting"></span>
+                <button id="logout-button" style="display: none;"><i class="fa-solid fa-right-from-bracket"></i> Вийти</button>
+                <button id="cart-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Кошик (<span id="cart-count">0</span>)
+                </button>
+            </div>
+            <button onclick="window.location.href='index.html'" class="back-button">Назад</button>
+        </header>
+        <div class="item-details">
+            <div class="item-image">
+                <img id="item-image" src="" alt="">
+            </div>
+            <div class="item-info">
+                <h3 id="item-title"></h3>
+                <p><strong>Тип:</strong> <span id="item-type-text"></span></p>
+                <p><strong>Ціна:</strong> <span id="item-price"></span></p>
+                <p id="auth-hint" style="display: none; color: red; margin-bottom: 10px;">Будь ласка, авторизуйтесь для покупки.</p>
+                <button id="buy-button">Купити</button>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>Графік ціни (Останні 7 днів)</h2>
+            <canvas id="price-chart"></canvas>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Авторизація</h2>
+            <p>Будь ласка, авторизуйтесь.</p>
+            <input type="text" id="login" name="login" placeholder="Логін">
+            <input type="password" id="password" name="password" placeholder="Пароль">
+            <button id="login-button">Увійти</button>
+        </div>
+    </div>
+    <script src="item.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

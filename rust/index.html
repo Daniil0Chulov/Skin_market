@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Торговий майданчик Rust</title> <!-- Изменено -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="page-index">
+    <header class="site-header">
+        <h1>Торговий майданчик Rust</h1> <!-- Изменено -->
+        <div class="user-info">
+            <span id="user-greeting"></span>
+            <button id="logout-button" style="display: none;"><i class="fa-solid fa-right-from-bracket"></i> Вийти</button>
+            <button id="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Кошик (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="filters">
+            <h2>Фільтри</h2>
+            <!-- Изменен фильтр Тип Предмета -->
+            <div class="filter-group">
+                <h3>Тип Предмета</h3>
+                <select id="item-type">
+                    <option value="all">Всі</option>
+                    <option value="weapon">Зброя</option>
+                    <option value="clothing">Одяг</option>
+                    <option value="item">Предмети</option>
+                    <option value="construction">Будівництво</option>
+                </select>
+            </div>
+            <!-- Убраны фильтры Качество TF2 и Класс -->
+            <div class="filter-group">
+                <h3>Ціна</h3>
+                <div class="price-input">
+                    <div class="field">
+                        <span>Мін</span>
+                        <input type="number" class="input-min" value="0">
+                    </div>
+                    <div class="separator">-</div>
+                    <div class="field">
+                        <span>Макс</span>
+                        <input type="number" class="input-max" value="50000"> <!-- Изменен макс. цена -->
+                    </div>
+                </div>
+            </div>
+            <button id="apply-filters">Застосувати</button>
+        </div>
+        <div class="items-wrapper">
+            <button id="sort-by-price">Сортувати за ціною</button>
+            <div class="items">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
